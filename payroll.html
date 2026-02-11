@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payroll Page</title>
+  <link rel="stylesheet" href="./assets/css/payroll.css" />
+</head>
+<body>
+
+<div class="container">
+  <h1>Payroll System</h1>
+  <p class="sub">Enter employee details to generate a payslip.</p>
+
+  <div class="form-card">
+    <form method="POST" action="payroll_calc.php" class="grid">
+      <div class="field">
+        <label>Employee Name</label>
+        <input type="text" name="name" placeholder="e.g. John Doe" required>
+      </div>
+
+      <div class="field">
+        <label>Hours Worked</label>
+        <input type="number" name="hours" step="0.01" placeholder="e.g. 40" required>
+      </div>
+
+      <div class="field">
+        <label>Hourly Rate ($)</label>
+        <input type="number" name="rate" step="0.01" placeholder="e.g. 15" required>
+      </div>
+
+      <div class="field">
+        <label>Deduction ($)</label>
+        <input type="number" name="deduction" step="0.01" placeholder="e.g. 10" required>
+      </div>
+
+      <div class="actions">
+        <button type="submit">Generate Payslip</button>
+        <button type="reset" class="ghost">Clear Form</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
