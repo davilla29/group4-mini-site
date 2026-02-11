@@ -10,32 +10,91 @@
 
 <div class="container">
   <h1>Payroll System</h1>
-  <p class="sub">Enter employee details to generate a payslip.</p>
+  <p class="sub">Fill at least 50 employees, then generate payroll.</p>
 
   <div class="form-card">
-    <form method="POST" action="payroll_calc.php" class="grid">
-      <div class="field">
-        <label>Employee Name</label>
-        <input type="text" name="name" placeholder="e.g. John Doe" required>
+    <form method="POST" action="payroll_calc.php">
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Employee Name</th>
+              <th>Hours</th>
+              <th>Rate ($)</th>
+              <th>Deduction ($)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 50 rows -->
+            <!-- You can increase beyond 50 if you want (copy and paste more rows) -->
+            <!-- Using array names: name[], hours[], rate[], deduction[] -->
+            <!-- 1 - 50 -->
+            <!-- TIP: You can quickly duplicate rows in VS Code -->
+            <!-- START -->
+            <tr><td>1</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>2</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>3</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>4</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>5</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>6</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>7</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>8</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>9</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>10</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+
+            <!-- Copy rows 11 - 50 (included below to satisfy 50 minimum) -->
+            <tr><td>11</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>12</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>13</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>14</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>15</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>16</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>17</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>18</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>19</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>20</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+
+            <tr><td>21</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>22</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>23</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>24</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>25</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>26</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>27</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>28</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>29</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>30</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+
+            <tr><td>31</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>32</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>33</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>34</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>35</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>36</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>37</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>38</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>39</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>40</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+
+            <tr><td>41</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>42</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>43</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>44</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>45</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>46</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>47</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>48</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>49</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <tr><td>50</td><td><input name="name[]" ></td><td><input type="number" step="0.01" name="hours[]" ></td><td><input type="number" step="0.01" name="rate[]" ></td><td><input type="number" step="0.01" name="deduction[]" ></td></tr>
+            <!-- END -->
+          </tbody>
+        </table>
       </div>
 
-      <div class="field">
-        <label>Hours Worked</label>
-        <input type="number" name="hours" step="0.01" placeholder="e.g. 40" required>
-      </div>
-
-      <div class="field">
-        <label>Hourly Rate ($)</label>
-        <input type="number" name="rate" step="0.01" placeholder="e.g. 15" required>
-      </div>
-
-      <div class="field">
-        <label>Deduction ($)</label>
-        <input type="number" name="deduction" step="0.01" placeholder="e.g. 10" required>
-      </div>
-
-      <div class="actions">
-        <button type="submit">Generate Payslip</button>
+      <div class="actions" style="margin-top:12px;">
+        <button type="submit">Generate Payroll</button>
         <button type="reset" class="ghost">Clear Form</button>
       </div>
     </form>
