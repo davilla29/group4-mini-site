@@ -53,18 +53,20 @@ This project is a simple multi-page mini-site developed by **Group 4** for the c
 ```
 group4-mini-site/
 │
-├── index.html
-├── payroll.html
-├── gpa.html
-├── profile.html
+├── index.php
+├── payroll.php
+├── gpa.php
+├── profile.php
 │
 ├── assets/
 │   ├── css/
-│   │   └── style.css
+│   │   ├── style.css
+│   │   └── payroll.css
+│   │   └── gpa.css
+│   │
 │   └── js/
 │       ├── data.js
 │       ├── home.js
-│       ├── payroll.js
 │       ├── gpa.js
 │       └── profile.js
 │
