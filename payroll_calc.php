@@ -1,16 +1,16 @@
 <?php
+// payroll_calc.php (NO session, NO database, arrays only)
 
-// Read inputs
-$name = trim($_POST["name"] ?? "");
-$hours = (float)($_POST["hours"] ?? 0);
-$rate = (float)($_POST["rate"] ?? 0);
-$deduction = (float)($_POST["deduction"] ?? 0);
+// Collect arrays from form
+$names = $_POST["name"] ?? [];
+$hours = $_POST["hours"] ?? [];
+$rates = $_POST["rate"] ?? [];
+$deductions = $_POST["deduction"] ?? [];
 
-// Arrays only (single record)
-$employees = [$name];
-$hoursWorked = [$hours];
-$hourlyRate = [$rate];
-$deductions = [$deduction];
+// Ensure arrays
+if (!is_array($names) || !is_array($hours) || !is_array($rates) || !is_array($deductions)) {
+    die("Invalid form submission.");
+}
 
 function grossPay($h, $r)
 {
@@ -21,14 +21,44 @@ function netPay($g, $d)
     return $g - $d;
 }
 
-// Compute
-$gross = grossPay($hoursWorked[0], $hourlyRate[0]);
-$net = netPay($gross, $deductions[0]);
+// Validate: must be at least 50 valid employees
+$validCount = 0;
+$payroll = []; // array of computed results
 
-// Basic validation
-if ($employees[0] === "" || $hoursWorked[0] <= 0 || $hourlyRate[0] <= 0 || $deductions[0] < 0) {
-    die("Invalid input. Please go back and enter valid values.");
+for ($i = 0; $i < count($names); $i++) {
+    $name = trim($names[$i] ?? "");
+    $h = (float)($hours[$i] ?? 0);
+    $r = (float)($rates[$i] ?? 0);
+    $d = (float)($deductions[$i] ?? 0);
+
+    if ($name !== "" && $h > 0 && $r > 0 && $d >= 0) {
+        $gross = grossPay($h, $r);
+        $net = netPay($gross, $d);
+
+        $payroll[] = [
+            "name" => $name,
+            "hours" => $h,
+            "rate" => $r,
+            "deduction" => $d,
+            "gross" => $gross,
+            "net" => $net
+        ];
+
+        $validCount++;
+    }
 }
+
+if ($validCount < 50) {
+    die("You must enter at least 50 valid employees. Go back and complete the form.");
+}
+
+// // Summary
+// $totalNet = 0;
+// $totalGross = 0;
+// for ($i = 0; $i < count($payroll); $i++) {
+//     $totalGross += $payroll[$i]["gross"];
+//     $totalNet += $payroll[$i]["net"];
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,52 +66,62 @@ if ($employees[0] === "" || $hoursWorked[0] <= 0 || $hourlyRate[0] <= 0 || $dedu
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Payslip Result</title>
-    <link rel="stylesheet" href="../assets/css/payroll.css" />
+    <title>Payroll Result</title>
+    <link rel="stylesheet" href="./assets/css/payroll.css" />
 </head>
 
 <body>
 
     <div class="container">
-        <h1>Payslip</h1>
-        <p class="sub">Payroll calculation result.</p>
+        <h1>Payroll Result</h1>
+        <p class="sub">Computed payslip details for employees.</p>
 
-        <div class="payslip-card">
-            <div class="row">
-                <span>Employee Name:</span>
-                <b><?php echo htmlspecialchars($employees[0]); ?></b>
+        <!-- <div class="summary">
+            <div class="pill">
+                <span>Total Employees</span>
+                <b><?php echo count($payroll); ?></b>
             </div>
-
-            <div class="row">
-                <span>Hours Worked:</span>
-                <b><?php echo number_format($hoursWorked[0], 2); ?></b>
+            <div class="pill">
+                <span>Total Gross Pay</span>
+                <b>$<?php echo number_format($totalGross, 2); ?></b>
             </div>
-
-            <div class="row">
-                <span>Hourly Rate ($):</span>
-                <b><?php echo number_format($hourlyRate[0], 2); ?></b>
+            <div class="pill">
+                <span>Total Net Pay</span>
+                <b>$<?php echo number_format($totalNet, 2); ?></b>
             </div>
+        </div> -->
 
-            <div class="row">
-                <span>Deduction ($):</span>
-                <b><?php echo number_format($deductions[0], 2); ?></b>
-            </div>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Employee Name</th>
+                        <th>Hours</th>
+                        <th>Rate ($)</th>
+                        <th>Deduction ($)</th>
+                        <th>Gross ($)</th>
+                        <th>Net ($)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php for ($i = 0; $i < count($payroll); $i++): ?>
+                        <tr>
+                            <td><?php echo $i + 1; ?></td>
+                            <td><?php echo htmlspecialchars($payroll[$i]["name"]); ?></td>
+                            <td><?php echo number_format($payroll[$i]["hours"], 2); ?></td>
+                            <td><?php echo number_format($payroll[$i]["rate"], 2); ?></td>
+                            <td><?php echo number_format($payroll[$i]["deduction"], 2); ?></td>
+                            <td><?php echo number_format($payroll[$i]["gross"], 2); ?></td>
+                            <td><?php echo number_format($payroll[$i]["net"], 2); ?></td>
+                        </tr>
+                    <?php endfor; ?>
+                </tbody>
+            </table>
+        </div>
 
-            <hr>
-
-            <div class="row highlight">
-                <span>Gross Pay ($):</span>
-                <b><?php echo number_format($gross, 2); ?></b>
-            </div>
-
-            <div class="row highlight">
-                <span>Net Pay ($):</span>
-                <b><?php echo number_format($net, 2); ?></b>
-            </div>
-
-            <div class="actions end">
-                <a class="link-btn" href="payroll.html">Back to Payroll Form</a>
-            </div>
+        <div class="actions end" style="margin-top:14px;">
+            <a class="link-btn" href="payroll.html">Back</a>
         </div>
     </div>
 
