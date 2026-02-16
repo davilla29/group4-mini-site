@@ -22,7 +22,7 @@ $semester = "2025/2026";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group Members & Course Registration</title>
     <!-- Import external CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/assets/css/index.css">
 </head>
 <body>
     <!-- Header section -->
