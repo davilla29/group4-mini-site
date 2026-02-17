@@ -357,4 +357,85 @@ $gpaRecords = array (
     ),
   ),
 );
+
+// Student-to-Matric mapping
+$studentMatricsMap = array(
+  'Bamidele Ronnie-azriel Ifeoluwa' => '22/0318',
+  'Azuatalam Chiedu Frank' => '22/0131',
+  'Bolarinwa David Eniola' => '22/0019',
+  'Olatilewa Braimah' => '22/0131',
+  'Basanya Basirat Abiodun' => '22/0093',
+  'Chidinma Ogor Deborah' => '22/0148',
+  'Babington-Ashaye Adejare' => '22/0158',
+  'Emmanuel Chibuzor' => '22/0060',
+  'Chigeru Davies Chidera' => '22/0094',
+  'Benjamin Angelo Mfoniso' => '22/0151',
+);
+
+// Registered courses for each matric number (based on GPA scores)
+$studentCourses = array(
+  '22/0318' => array(
+    array('code' => 'SENG405', 'title' => 'Software Project Management'),
+    array('code' => 'SENG407', 'title' => 'Software Measurement and Metrics'),
+    array('code' => 'SENG401', 'title' => 'Mobile Applications Design and Developments'),
+    array('code' => 'SENG413', 'title' => 'Current Trends in Software Engineering'),
+    array('code' => 'COSC423', 'title' => 'Artificial Intelligence and Applications'),
+  ),
+  '22/0131' => array(
+    array('code' => 'SENG405', 'title' => 'Software Project Management'),
+    array('code' => 'SENG407', 'title' => 'Software Measurement and Metrics'),
+    array('code' => 'SENG401', 'title' => 'Mobile Applications Design and Developments'),
+    array('code' => 'COSC423', 'title' => 'Artificial Intelligence and Applications'),
+    array('code' => 'SENG411', 'title' => 'Open Source Systems Development'),
+  ),
+  '22/0019' => array(
+    array('code' => 'SENG405', 'title' => 'Software Project Management'),
+    array('code' => 'SENG407', 'title' => 'Software Measurement and Metrics'),
+    array('code' => 'SENG401', 'title' => 'Mobile Applications Design and Developments'),
+    array('code' => 'SENG413', 'title' => 'Current Trends in Software Engineering'),
+    array('code' => 'COSC423', 'title' => 'Artificial Intelligence and Applications'),
+  ),
+  '22/0093' => array(
+    array('code' => 'SENG405', 'title' => 'Software Project Management'),
+    array('code' => 'SENG407', 'title' => 'Software Measurement and Metrics'),
+    array('code' => 'SENG401', 'title' => 'Mobile Applications Design and Developments'),
+    array('code' => 'COSC423', 'title' => 'Artificial Intelligence and Applications'),
+    array('code' => 'SENG411', 'title' => 'Open Source Systems Development'),
+  ),
+  '22/0148' => array(
+    array('code' => 'SENG405', 'title' => 'Software Project Management'),
+    array('code' => 'SENG407', 'title' => 'Software Measurement and Metrics'),
+    array('code' => 'SENG401', 'title' => 'Mobile Applications Design and Developments'),
+    array('code' => 'SENG413', 'title' => 'Current Trends in Software Engineering'),
+    array('code' => 'COSC423', 'title' => 'Artificial Intelligence and Applications'),
+  ),
+  '22/0158' => array(
+    array('code' => 'SENG405', 'title' => 'Software Project Management'),
+    array('code' => 'SENG407', 'title' => 'Software Measurement and Metrics'),
+    array('code' => 'SENG401', 'title' => 'Mobile Applications Design and Developments'),
+    array('code' => 'SENG413', 'title' => 'Current Trends in Software Engineering'),
+    array('code' => 'COSC423', 'title' => 'Artificial Intelligence and Applications'),
+  ),
+  '22/0060' => array(
+    array('code' => 'SENG405', 'title' => 'Software Project Management'),
+    array('code' => 'SENG407', 'title' => 'Software Measurement and Metrics'),
+    array('code' => 'SENG401', 'title' => 'Mobile Applications Design and Developments'),
+    array('code' => 'COSC423', 'title' => 'Artificial Intelligence and Applications'),
+    array('code' => 'SENG409', 'title' => 'Network Security and Software Development'),
+  ),
+  '22/0094' => array(
+    array('code' => 'SENG405', 'title' => 'Software Project Management'),
+    array('code' => 'SENG407', 'title' => 'Software Measurement and Metrics'),
+    array('code' => 'SENG401', 'title' => 'Mobile Applications Design and Developments'),
+    array('code' => 'SENG413', 'title' => 'Current Trends in Software Engineering'),
+    array('code' => 'COSC423', 'title' => 'Artificial Intelligence and Applications'),
+  ),
+  '22/0151' => array(
+    array('code' => 'SENG405', 'title' => 'Software Project Management'),
+    array('code' => 'SENG407', 'title' => 'Software Measurement and Metrics'),
+    array('code' => 'SENG401', 'title' => 'Mobile Applications Design and Developments'),
+    array('code' => 'SENG413', 'title' => 'Current Trends in Software Engineering'),
+    array('code' => 'COSC423', 'title' => 'Artificial Intelligence and Applications'),
+  ),
+);
 ?>

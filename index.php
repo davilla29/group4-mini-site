@@ -1,4 +1,6 @@
 <?php
+require_once 'data.php';
+
 $students = [
     ["name" => "Azuatalam Chiedu Frank", "matric" => "22/0131"],
     ["name" => "Babington-Ashaye Adejare ", "matric" => "22/0158"],
@@ -54,9 +56,9 @@ $semester = "2025/2026";
                             <h3>Course Options</h3>
                             <p><?php echo htmlspecialchars($student["name"]); ?></p>
                             
-                            <a href="view_courses.php?matric=<?php echo urlencode($student['matric']); ?>" class="course-btn">
+                            <button class="course-btn" onclick="openCoursesModal('<?php echo htmlspecialchars($student['name']); ?>', '<?php echo htmlspecialchars($student['matric']); ?>')">
                                 View Registered Courses
-                            </a>
+                            </button>
                         </div>
 
                     </div>
@@ -68,5 +70,67 @@ $semester = "2025/2026";
     <div class="footer">
         &copy; <?php echo date('Y'); ?> | Software Engineering Group A-4
     </div>
+
+    <!-- Courses Modal -->
+    <div id="coursesModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeCoursesModal()">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalStudentName"></h2>
+                <p id="modalMatricNo"></p>
+            </div>
+            <div class="modal-body">
+                <h3>📖 Registered Courses (<span id="courseCount">0</span>)</h3>
+                <div id="coursesList" class="courses-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Course data from PHP
+        const coursesData = <?php echo json_encode($studentCourses); ?>;
+
+        function openCoursesModal(name, matric) {
+            const modal = document.getElementById('coursesModal');
+            const studentName = document.getElementById('modalStudentName');
+            const matricNo = document.getElementById('modalMatricNo');
+            const coursesList = document.getElementById('coursesList');
+            const courseCount = document.getElementById('courseCount');
+
+            studentName.textContent = name;
+            matricNo.textContent = 'Matric No: ' + matric;
+
+            // Get courses for this matric
+            const courses = coursesData[matric] || [];
+            courseCount.textContent = courses.length;
+
+            // Build courses HTML
+            let coursesHTML = '';
+            courses.forEach(course => {
+                coursesHTML += `
+                    <div class="course-item">
+                        <span class="course-code">${course.code}</span>
+                        <span class="course-title">${course.title}</span>
+                    </div>
+                `;
+            });
+
+            coursesList.innerHTML = coursesHTML;
+            modal.style.display = 'block';
+        }
+
+        function closeCoursesModal() {
+            const modal = document.getElementById('coursesModal');
+            modal.style.display = 'none';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('coursesModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
