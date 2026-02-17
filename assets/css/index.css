@@ -1,0 +1,340 @@
+/*
+styles.css
+Styling for the student list page. Responsive and matches the provided layout.
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f3f7fb;
+}
+
+.header {
+    background: #111;
+    color: #fff;
+    padding: 30px 0 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.header .semester {
+    font-size: 1rem;
+    color: #b3b3b3;
+    margin-top: 5px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto 60px auto; 
+    padding: 0 20px;
+}
+
+.total-members {
+    background: #2563eb;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 12px 0;
+    text-align: left;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding-left: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 32px;
+    justify-items: center;
+}
+
+/* --- Flip Card Containers --- */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 250px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 12px;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* --- Faces --- */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;     
+  gap: 10px;               
+  
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.name, .matric, .flip, .icon {
+  text-align: center;
+  margin: 0; 
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.flip {
+  font-size: 0.8rem; 
+  color: #888; 
+  margin-top: 10px; 
+}
+
+.flip-card-front {
+  background-color: white; 
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2563eb; 
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* --- Button Style --- */
+.course-btn {
+  background-color: white;
+  color: #2563eb;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+.course-btn:hover {
+  background-color: #dbeafe;
+}
+
+.footer {
+    background: #111;
+    color: #b3b3b3;
+    text-align: center;
+    padding: 18px 0 10px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-top: 20px;
+    }
+    .cards {
+        gap: 18px;
+    }
+    .card {
+        min-height: 210px;
+        max-width: 98vw;
+    }
+    .header h1 {
+        font-size: 1.2rem;
+    }
+}
+
+/* --- Modal Styles --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 0;
+    border: none;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    animation: slideDown 0.3s ease-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 12px 12px 0 0;
+    position: relative;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.modal-header p {
+    margin: 8px 0 0 0;
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    line-height: 1;
+    transition: transform 0.2s;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 30px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.modal-body h3 {
+    margin: 0 0 20px 0;
+    font-size: 1.3rem;
+    color: #1f2937;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.courses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.course-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    background-color: #f3f4f6;
+    border-left: 4px solid #2563eb;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.course-item:hover {
+    background-color: #e0e7ff;
+    transform: translateX(5px);
+}
+
+.course-code {
+    background-color: #1f2937;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.course-title {
+    color: #374151;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+/* Modal responsive */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+        margin: 30% auto;
+    }
+    
+    .modal-header {
+        padding: 20px;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .modal-body {
+        padding: 20px;
+    }
+    
+    .course-item {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
