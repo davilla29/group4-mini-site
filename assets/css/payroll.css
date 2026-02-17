@@ -1,178 +1,157 @@
-* { box-sizing: border-box; }
+/* assets/css/payroll.css (Page-only) */
 
-body{
-  font-family: Arial, sans-serif;
-  background: #f4f6f9;
-  margin: 0;
-  padding: 20px;
-  color: #222;
-}
-
-.container{
+/* Keep container styles only (global layout is in style.css) */
+.container {
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
   background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
 }
 
-h1{
-  text-align: center;
+h1 {
   margin: 0 0 6px;
-  color: #222;
+  color: white;
 }
 
-.sub{
+.sub {
   text-align: center;
   margin: 0 0 18px;
-  color: #666;
+  color: #64748b;
   font-size: 14px;
 }
 
-.form-card{
-  background: #fafbfc;
-  border: 1px solid #e7eaf0;
+.form-card {
+  background: #f8fafc;
+  border: 1px solid var(--border);
   padding: 16px;
-  border-radius: 10px;
+  border-radius: 14px;
   margin-bottom: 16px;
 }
 
-.grid{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  align-items: end;
-}
-
-.field label{
-  display: block;
-  font-size: 13px;
-  margin-bottom: 6px;
-  color: #444;
-}
-
-.field input{
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #dfe3ea;
-  border-radius: 8px;
-  outline: none;
-  background: white;
-}
-
-.field input:focus{
-  border-color: #2c3e50;
-}
-
-.actions{
-  grid-column: 1 / -1;
-  display: flex;
-  gap: 10px;
-  justify-content: flex-end;
-  margin-top: 8px;
-}
-
-button{
-  border: none;
-  padding: 10px 14px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-button[name="add"]{
-  background: #2c3e50;
-  color: #fff;
-}
-
-button[name="add"]:hover{ opacity: 0.92; }
-
-.ghost{
-  background: transparent;
-  border: 1px solid #cfd6e3;
-  color: #2c3e50;
-}
-
-.ghost:hover{
-  background: #eef2f7;
-}
-
-.summary{
-  display: flex;
-  gap: 12px;
-  margin: 12px 0 16px;
-  flex-wrap: wrap;
-}
-
-.pill{
-  flex: 1;
-  min-width: 220px;
-  background: #f7f9fc;
-  border: 1px solid #e7eaf0;
-  border-radius: 10px;
-  padding: 12px 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.table-wrap{
+/* Table wrapper */
+.table-wrap {
   overflow-x: auto;
-  border-radius: 10px;
-  border: 1px solid #e7eaf0;
+  border-radius: 14px;
+  border: 1px solid var(--border);
 }
 
-table{
+/* Table */
+table {
   width: 100%;
   border-collapse: collapse;
   min-width: 900px;
 }
 
-thead{
-  background: #2c3e50;
+thead {
+  background: var(--black);
   color: #fff;
 }
 
-th, td{
+th,
+td {
   padding: 10px;
   text-align: center;
-  border-bottom: 1px solid #e8ecf3;
+  border-bottom: 1px solid var(--border);
 }
 
-tbody tr:nth-child(even){
-  background: #f6f7fb;
+tbody tr:nth-child(even) {
+  background: #f8fafc;
 }
 
-tbody tr:hover{
-  background: #e6f0ff;
+tbody tr:hover {
+  background: rgba(37, 99, 235, 0.1); /* blue tint */
   transition: 0.2s;
 }
 
-.empty{
-  padding: 20px;
-  color: #666;
-  font-style: italic;
+/* Inputs inside table */
+td input {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  outline: none;
+  background: #fff;
 }
 
-.inline{ display: inline; }
+td input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
 
-.danger{
-  background: #c0392b;
-  color: white;
+/* Actions */
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+/* Buttons */
+button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* Primary submit button */
+button[type="submit"] {
+  background: var(--blue);
+  color: #fff;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.92;
+}
+
+/* Reset / ghost */
+button.ghost,
+button[type="reset"].ghost {
+  background: transparent;
+  border: 1px solid #cbd5e1;
+  color: var(--black);
+}
+
+button.ghost:hover {
+  background: #eef2ff;
+}
+
+/* Link button (for payroll_calc.php “Back”) */
+.link-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--blue);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.link-btn:hover {
+  opacity: 0.92;
+}
+
+/* Optional: danger style if you use it */
+.danger {
+  background: #b91c1c;
+  color: #fff;
   padding: 7px 10px;
-  border-radius: 7px;
+  border-radius: 10px;
   font-size: 12px;
 }
 
-.danger:hover{ opacity: 0.9; }
-
-@media (max-width: 900px){
-  .grid{ grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 520px){
-  .grid{ grid-template-columns: 1fr; }
-  .actions{ justify-content: stretch; }
-  button{ width: 100%; }
+/* Responsive */
+@media (max-width: 520px) {
+  .actions {
+    justify-content: stretch;
+  }
+  button,
+  .link-btn {
+    width: 100%;
+    text-align: center;
+  }
 }
