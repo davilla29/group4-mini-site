@@ -13,7 +13,7 @@ body {
 .header {
     background: #111;
     color: #fff;
-    padding: 30px 0 10px 0;
+    padding: 30px 0 20px 0;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
@@ -32,7 +32,7 @@ body {
 
 .container {
     max-width: 1200px;
-    margin: 40px auto 60px auto; /* Increased bottom margin for more space below cards */
+    margin: 40px auto 60px auto; 
     padding: 0 20px;
 }
 
@@ -55,57 +55,91 @@ body {
     justify-items: center;
 }
 
-.card {
-    background: #2563eb;
-    color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    width: 100%;
-    max-width: 320px;
-    min-height: 270px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    border: 2px solid #111;
-    transition: transform 0.2s;
+/* --- Flip Card Containers --- */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 250px;
+  perspective: 1000px;
 }
 
-.card:hover {
-    transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 6px 24px rgba(37,99,235,0.15);
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 12px;
 }
 
-.card .icon {
-    font-size: 4.5rem;
-    margin-bottom: 18px;
-    color: #dbeafe;
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
 }
 
-.card .name {
-    font-size: 1.4rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    text-align: center;
+/* --- Faces --- */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;     
+  gap: 10px;               
+  
+  padding: 15px;
+  box-sizing: border-box;
 }
 
-.card .matric {
-    background: #1e40af;
-    color: #fff;
-    border-radius: 6px;
-    padding: 7px 18px;
-    font-size: 1.05rem;
-    font-weight: 500;
-    margin-bottom: 12px;
-    display: inline-block;
+.name, .matric, .flip, .icon {
+  text-align: center;
+  margin: 0; 
 }
 
-.card .flip {
-    font-size: 0.95rem;
-    color: #e0e7ef;
-    font-style: italic;
-    margin-top: 8px;
+.name {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.flip {
+  font-size: 0.8rem; 
+  color: #888; 
+  margin-top: 10px; 
+}
+
+.flip-card-front {
+  background-color: white; 
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2563eb; 
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* --- Button Style --- */
+.course-btn {
+  background-color: white;
+  color: #2563eb;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+.course-btn:hover {
+  background-color: #dbeafe;
 }
 
 .footer {
@@ -133,5 +167,174 @@ body {
     }
     .header h1 {
         font-size: 1.2rem;
+    }
+}
+
+/* --- Modal Styles --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 0;
+    border: none;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    animation: slideDown 0.3s ease-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 12px 12px 0 0;
+    position: relative;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.modal-header p {
+    margin: 8px 0 0 0;
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    line-height: 1;
+    transition: transform 0.2s;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 30px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.modal-body h3 {
+    margin: 0 0 20px 0;
+    font-size: 1.3rem;
+    color: #1f2937;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.courses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.course-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    background-color: #f3f4f6;
+    border-left: 4px solid #2563eb;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.course-item:hover {
+    background-color: #e0e7ff;
+    transform: translateX(5px);
+}
+
+.course-code {
+    background-color: #1f2937;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.course-title {
+    color: #374151;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+/* Modal responsive */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+        margin: 30% auto;
+    }
+    
+    .modal-header {
+        padding: 20px;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .modal-body {
+        padding: 20px;
+    }
+    
+    .course-item {
+        flex-direction: column;
+        gap: 8px;
     }
 }
