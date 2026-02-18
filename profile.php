@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group Members - Personal Details</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="assets/css/profile.css">
 </head>
+
 <body>
-    <header>
-        <h1>Group 4</h1>
-        <nav>
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="payroll.html">Payroll</a></li>
-                <li><a href="gpa.php">GPA Calculator</a></li>
-                <li><a href="profile.php">Profiles</a></li>
-            </ul>
+    <header class="site-header">
+        <div class="header-inner">
+            <h1>Group Members Profiles</h1>
+            <div class="semester">Group 4 Members</div>
+        </div>
+
+        <nav class="navbar">
+            <div class="nav-inner">
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="payroll.html">Payroll</a></li>
+                    <li><a href="gpa.php">GPA Calculator</a></li>
+                    <li><a class="active" href="profile.php">Profiles</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
-        <h2>Group Members Profiles</h2>
         <div class="profile-container">
             <?php
             include 'data.php';
@@ -42,8 +49,10 @@
             ?>
         </div>
     </main>
-    <footer>
-        <p>&copy; 2026 Group 4</p>
+    <footer class="site-footer">
+        &copy; <?php echo date('Y'); ?> | Software Engineering Group 4 SENG412
     </footer>
+
 </body>
+
 </html>

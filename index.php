@@ -87,22 +87,26 @@ $semester = "2025/2026";
         <!-- Courses Modal -->
         <div id="coursesModal" class="modal">
             <div class="modal-content">
-                <span class="close-btn" onclick="closeCoursesModal()">&times;</span>
+
                 <div class="modal-header">
+                    <span class="close-btn" onclick="closeCoursesModal()">&times;</span>
                     <h2 id="modalStudentName"></h2>
                     <p id="modalMatricNo"></p>
                 </div>
+
                 <div class="modal-body">
                     <h3>📖 Registered Courses (<span id="courseCount">0</span>)</h3>
                     <div id="coursesList" class="courses-list"></div>
                 </div>
+
             </div>
         </div>
+
 
     </main>
 
     <footer class="site-footer">
-        &copy; <?php echo date('Y'); ?> | Software Engineering Group A-4
+        &copy; <?php echo date('Y'); ?> | Software Engineering Group 4 SENG412
     </footer>
 
     <script>

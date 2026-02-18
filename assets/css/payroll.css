@@ -144,6 +144,86 @@ button.ghost:hover {
   font-size: 12px;
 }
 
+/* For result page title inside container */
+.page-title {
+  margin: 0 0 6px;
+  text-align: center;
+  color: #0f172a;
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.sub {
+  text-align: center;
+  margin: 0 0 18px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Table wrapper */
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+thead {
+  background: #0f172a;
+  color: #fff;
+}
+
+th {
+  padding: 12px 10px;
+  font-size: 0.92rem;
+  font-weight: 800;
+  text-align: center;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.2);
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+/* Subtle zebra rows only */
+tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+/* NO hover effect (intentionally none) */
+
+/* Back button */
+.link-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #2563eb;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.link-btn:hover {
+  opacity: 0.92;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
 /* Responsive */
 @media (max-width: 520px) {
   .actions {

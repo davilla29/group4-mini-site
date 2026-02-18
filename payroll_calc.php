@@ -48,7 +48,7 @@ for ($i = 0; $i < count($names); $i++) {
     }
 }
 
-if ($validCount < 50) {
+if ($validCount < 5) {
     die("You must enter at least 50 valid employees. Go back and complete the form.");
 }
 

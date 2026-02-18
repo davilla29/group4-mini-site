@@ -192,16 +192,15 @@ $gpaRecords = array (
     'name' => 'Bamidele Ronnie-azriel Ifeoluwa',
     'scores' => 
     array (
-      'SENG405' => 78,
-      'SENG407' => 82,
-      'SENG401' => 85,
-      'SENG413' => 71,
-      'COSC423' => 88,
-      'COSC409' => 90,
-      'SENG411' => 83,
-      'GEDS400' => 75,
-      'SENG409' => 80,
-      'GEDS001' => 12,
+      'SENG405' => 78.0,
+      'SENG407' => 82.0,
+      'SENG401' => 85.0,
+      'SENG413' => 71.0,
+      'COSC423' => 88.0,
+      'COSC409' => 90.0,
+      'SENG411' => 83.0,
+      'GEDS400' => 75.0,
+      'SENG409' => 80.0,
     ),
   ),
   1 => 
@@ -218,7 +217,6 @@ $gpaRecords = array (
       'SENG411' => 84,
       'GEDS400' => 66,
       'SENG409' => 82,
-      'GEDS001' => 8,
     ),
   ),
   2 => 
@@ -226,16 +224,15 @@ $gpaRecords = array (
     'name' => 'Bolarinwa David Eniola',
     'scores' => 
     array (
-      'SENG405' => 89,
-      'SENG407' => 87,
-      'SENG401' => 92,
-      'SENG413' => 78,
-      'COSC423' => 90,
-      'COSC409' => 88,
-      'SENG411' => 94,
-      'GEDS400' => 85,
-      'SENG409' => 91,
-      'GEDS001' => 15,
+      'SENG405' => 89.0,
+      'SENG407' => 87.0,
+      'SENG401' => 92.0,
+      'SENG413' => 64.0,
+      'COSC423' => 71.0,
+      'COSC409' => 59.0,
+      'SENG411' => 94.0,
+      'GEDS400' => 72.0,
+      'SENG409' => 91.0,
     ),
   ),
   3 => 
@@ -277,16 +274,15 @@ $gpaRecords = array (
     'name' => 'Chidinma Ogor',
     'scores' => 
     array (
-      'SENG405' => 91,
-      'SENG407' => 89,
-      'SENG401' => 93,
-      'SENG413' => 85,
-      'COSC423' => 92,
-      'COSC409' => 88,
-      'SENG411' => 95,
-      'GEDS400' => 87,
-      'SENG409' => 90,
-      'GEDS001' => 22,
+      'SENG405' => 91.0,
+      'SENG407' => 89.0,
+      'SENG401' => 93.0,
+      'SENG413' => 85.0,
+      'COSC423' => 72.0,
+      'COSC409' => 88.0,
+      'SENG411' => 95.0,
+      'GEDS400' => 87.0,
+      'SENG409' => 90.0,
     ),
   ),
   6 => 
@@ -358,84 +354,16 @@ $gpaRecords = array (
   ),
 );
 
-// Student-to-Matric mapping
-$studentMatricsMap = array(
-  'Bamidele Ronnie-azriel Ifeoluwa' => '22/0318',
-  'Azuatalam Chiedu Frank' => '22/0131',
-  'Bolarinwa David Eniola' => '22/0019',
-  'Olatilewa Braimah' => '22/0131',
-  'Basanya Basirat Abiodun' => '22/0093',
-  'Chidinma Ogor Deborah' => '22/0148',
-  'Babington-Ashaye Adejare' => '22/0158',
-  'Emmanuel Chibuzor' => '22/0060',
-  'Chigeru Davies Chidera' => '22/0094',
-  'Benjamin Angelo Mfoniso' => '22/0151',
-);
+$studentCourses = [
+  "22/0131" => $semesterCourses,
+  "22/0158" => $semesterCourses,
+  "22/0318" => $semesterCourses,
+  "22/0093" => $semesterCourses,
+  "22/0151" => $semesterCourses,
+  "22/0019" => $semesterCourses,
+  "22/0060" => $semesterCourses,
+  "22/0148" => $semesterCourses,
+  "22/0094" => $semesterCourses,
+];
 
-// Registered courses for each matric number (based on GPA scores)
-$studentCourses = array(
-  '22/0318' => array(
-    array('code' => 'SENG405', 'title' => 'Software Project Management'),
-    array('code' => 'SENG407', 'title' => 'Software Measurement and Metrics'),
-    array('code' => 'SENG401', 'title' => 'Mobile Applications Design and Developments'),
-    array('code' => 'SENG413', 'title' => 'Current Trends in Software Engineering'),
-    array('code' => 'COSC423', 'title' => 'Artificial Intelligence and Applications'),
-  ),
-  '22/0131' => array(
-    array('code' => 'SENG405', 'title' => 'Software Project Management'),
-    array('code' => 'SENG407', 'title' => 'Software Measurement and Metrics'),
-    array('code' => 'SENG401', 'title' => 'Mobile Applications Design and Developments'),
-    array('code' => 'COSC423', 'title' => 'Artificial Intelligence and Applications'),
-    array('code' => 'SENG411', 'title' => 'Open Source Systems Development'),
-  ),
-  '22/0019' => array(
-    array('code' => 'SENG405', 'title' => 'Software Project Management'),
-    array('code' => 'SENG407', 'title' => 'Software Measurement and Metrics'),
-    array('code' => 'SENG401', 'title' => 'Mobile Applications Design and Developments'),
-    array('code' => 'SENG413', 'title' => 'Current Trends in Software Engineering'),
-    array('code' => 'COSC423', 'title' => 'Artificial Intelligence and Applications'),
-  ),
-  '22/0093' => array(
-    array('code' => 'SENG405', 'title' => 'Software Project Management'),
-    array('code' => 'SENG407', 'title' => 'Software Measurement and Metrics'),
-    array('code' => 'SENG401', 'title' => 'Mobile Applications Design and Developments'),
-    array('code' => 'COSC423', 'title' => 'Artificial Intelligence and Applications'),
-    array('code' => 'SENG411', 'title' => 'Open Source Systems Development'),
-  ),
-  '22/0148' => array(
-    array('code' => 'SENG405', 'title' => 'Software Project Management'),
-    array('code' => 'SENG407', 'title' => 'Software Measurement and Metrics'),
-    array('code' => 'SENG401', 'title' => 'Mobile Applications Design and Developments'),
-    array('code' => 'SENG413', 'title' => 'Current Trends in Software Engineering'),
-    array('code' => 'COSC423', 'title' => 'Artificial Intelligence and Applications'),
-  ),
-  '22/0158' => array(
-    array('code' => 'SENG405', 'title' => 'Software Project Management'),
-    array('code' => 'SENG407', 'title' => 'Software Measurement and Metrics'),
-    array('code' => 'SENG401', 'title' => 'Mobile Applications Design and Developments'),
-    array('code' => 'SENG413', 'title' => 'Current Trends in Software Engineering'),
-    array('code' => 'COSC423', 'title' => 'Artificial Intelligence and Applications'),
-  ),
-  '22/0060' => array(
-    array('code' => 'SENG405', 'title' => 'Software Project Management'),
-    array('code' => 'SENG407', 'title' => 'Software Measurement and Metrics'),
-    array('code' => 'SENG401', 'title' => 'Mobile Applications Design and Developments'),
-    array('code' => 'COSC423', 'title' => 'Artificial Intelligence and Applications'),
-    array('code' => 'SENG409', 'title' => 'Network Security and Software Development'),
-  ),
-  '22/0094' => array(
-    array('code' => 'SENG405', 'title' => 'Software Project Management'),
-    array('code' => 'SENG407', 'title' => 'Software Measurement and Metrics'),
-    array('code' => 'SENG401', 'title' => 'Mobile Applications Design and Developments'),
-    array('code' => 'SENG413', 'title' => 'Current Trends in Software Engineering'),
-    array('code' => 'COSC423', 'title' => 'Artificial Intelligence and Applications'),
-  ),
-  '22/0151' => array(
-    array('code' => 'SENG405', 'title' => 'Software Project Management'),
-    array('code' => 'SENG407', 'title' => 'Software Measurement and Metrics'),
-    array('code' => 'SENG401', 'title' => 'Mobile Applications Design and Developments'),
-    array('code' => 'SENG413', 'title' => 'Current Trends in Software Engineering'),
-    array('code' => 'COSC423', 'title' => 'Artificial Intelligence and Applications'),
-  ),
-);
 ?>
