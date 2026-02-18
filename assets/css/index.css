@@ -162,14 +162,6 @@
   cursor: pointer;
   color: #fff;
   background: rgba(255, 255, 255, 0.14);
-  transition:
-    background 0.2s ease,
-    transform 0.15s ease;
-}
-
-.close-btn:hover {
-  background: rgba(255, 255, 255, 0.22);
-  transform: rotate(10deg);
 }
 
 .modal-body {

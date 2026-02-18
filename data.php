@@ -387,7 +387,7 @@ $studentCourses = [
     ["code" => "SENG412", "title" => "Internet Technologies and Web Applications Development"],
     ["code" => "SENG490", "title" => "Research Project"],
     ["code" => "COSC430", "title" => "Hands-On-JAVA training"],
-    ["code" => "SENG408", "title" => "Analysis, Design and Modelling of Real-Time Systems"],
+    ["code" => "SENG414", "title" => "Cloud Computing Technologies"],
   ],
 
   "22/0093" => [
@@ -431,7 +431,7 @@ $studentCourses = [
     ["code" => "SENG412", "title" => "Internet Technologies and Web Applications Development"],
     ["code" => "SENG490", "title" => "Research Project"],
     ["code" => "COSC430", "title" => "Hands-On-JAVA training"],
-    ["code" => "SENG408", "title" => "Analysis, Design and Modelling of Real-Time Systems"],
+    ["code" => "SENG414", "title" => "Cloud Computing Technologies"],
   ],
 
   "22/0060" => [
