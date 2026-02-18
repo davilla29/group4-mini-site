@@ -1,7 +1,4 @@
 <?php
-// payroll_calc.php (NO session, NO database, arrays only)
-
-// Collect arrays from form
 $names = $_POST["name"] ?? [];
 $hours = $_POST["hours"] ?? [];
 $rates = $_POST["rate"] ?? [];
@@ -21,9 +18,9 @@ function netPay($g, $d)
     return $g - $d;
 }
 
-// Validate: must be at least 50 valid employees
+
 $validCount = 0;
-$payroll = []; // array of computed results
+$payroll = [];
 
 for ($i = 0; $i < count($names); $i++) {
     $name = trim($names[$i] ?? "");
@@ -48,17 +45,10 @@ for ($i = 0; $i < count($names); $i++) {
     }
 }
 
-if ($validCount < 5) {
-    die("You must enter at least 50 valid employees. Go back and complete the form.");
+if ($validCount < 50) {
+    echo ("You must enter at least 50 valid employees. Go back and complete the form.");
 }
 
-// // Summary
-// $totalNet = 0;
-// $totalGross = 0;
-// for ($i = 0; $i < count($payroll); $i++) {
-//     $totalGross += $payroll[$i]["gross"];
-//     $totalNet += $payroll[$i]["net"];
-// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,21 +66,6 @@ if ($validCount < 5) {
         <h1>Payroll Result</h1>
         <p class="sub">Computed payslip details for employees.</p>
 
-        <!-- <div class="summary">
-            <div class="pill">
-                <span>Total Employees</span>
-                <b><?php echo count($payroll); ?></b>
-            </div>
-            <div class="pill">
-                <span>Total Gross Pay</span>
-                <b>$<?php echo number_format($totalGross, 2); ?></b>
-            </div>
-            <div class="pill">
-                <span>Total Net Pay</span>
-                <b>$<?php echo number_format($totalNet, 2); ?></b>
-            </div>
-        </div> -->
-
         <div class="table-wrap">
             <table>
                 <thead>
@@ -98,10 +73,10 @@ if ($validCount < 5) {
                         <th>#</th>
                         <th>Employee Name</th>
                         <th>Hours</th>
-                        <th>Rate ($)</th>
-                        <th>Deduction ($)</th>
-                        <th>Gross ($)</th>
-                        <th>Net ($)</th>
+                        <th>Rate (₦)</th>
+                        <th>Deduction (₦)</th>
+                        <th>Gross (₦)</th>
+                        <th>Net (₦)</th>
                     </tr>
                 </thead>
                 <tbody>

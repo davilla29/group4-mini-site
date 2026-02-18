@@ -1,110 +1,110 @@
 <?php
-$members = array (
-  0 => 
-  array (
+$members = array(
+  0 =>
+  array(
     'name' => 'Bamidele Ronnie-azriel Ifeoluwa',
     'bloodGroup' => 'O+',
     'stateOfOrigin' => 'Kwara',
     'phoneNumber' => '08089646456',
-    'hobbies' => 
-    array (
+    'hobbies' =>
+    array(
       0 => 'Playing football',
       1 => 'learning new things ',
     ),
   ),
-  1 => 
-  array (
+  1 =>
+  array(
     'name' => 'Azuatalam Chiedu Frank',
     'bloodGroup' => 'O+',
     'stateOfOrigin' => 'Imo',
     'phoneNumber' => '09074679012',
-    'hobbies' => 
-    array (
+    'hobbies' =>
+    array(
       0 => 'Watching movies',
       1 => 'Playing games',
     ),
   ),
-  2 => 
-  array (
+  2 =>
+  array(
     'name' => 'Bolarinwa David Eniola',
     'bloodGroup' => 'O+',
     'stateOfOrigin' => 'Ogun',
     'phoneNumber' => '08093959789',
-    'hobbies' => 
-    array (
+    'hobbies' =>
+    array(
       0 => 'Playing table tennis',
       1 => 'Listening to music',
     ),
   ),
-  3 => 
-  array (
+  3 =>
+  array(
     'name' => 'Olatilewa Braimah',
     'bloodGroup' => 'O+',
     'stateOfOrigin' => 'lagos',
     'phoneNumber' => '07025515397',
-    'hobbies' => 
-    array (
+    'hobbies' =>
+    array(
       0 => 'Playing football',
       1 => 'playing FIFA',
     ),
   ),
-  4 => 
-  array (
+  4 =>
+  array(
     'name' => 'Basanya Basirat',
     'bloodGroup' => 'A+',
     'stateOfOrigin' => 'Lagos',
     'phoneNumber' => '09022029001',
-    'hobbies' => 
-    array (
+    'hobbies' =>
+    array(
       0 => 'Eating',
       1 => 'Watching Stuff',
     ),
   ),
-  5 => 
-  array (
+  5 =>
+  array(
     'name' => 'Chidinma Ogor',
     'bloodGroup' => 'O-',
     'stateOfOrigin' => 'Abia',
     'phoneNumber' => '09036363739',
-    'hobbies' => 
-    array (
+    'hobbies' =>
+    array(
       0 => 'Reading novels',
       1 => 'Watching movies',
       2 => 'Researching',
     ),
   ),
-  6 => 
-  array (
+  6 =>
+  array(
     'name' => 'Babington-Ashaye Adejare',
     'bloodGroup' => 'O+',
     'stateOfOrigin' => 'Ogun',
     'phoneNumber' => '09136302012',
-    'hobbies' => 
-    array (
+    'hobbies' =>
+    array(
       0 => 'Playing football',
       1 => 'Learning different History',
     ),
   ),
-  7 => 
-  array (
+  7 =>
+  array(
     'name' => 'Emmanuel Chibuzor',
     'bloodGroup' => 'O+',
     'stateOfOrigin' => 'Imo',
     'phoneNumber' => '09014307553',
-    'hobbies' => 
-    array (
+    'hobbies' =>
+    array(
       0 => 'Listening to music',
       1 => 'Reading books',
     ),
   ),
-  8 => 
-  array (
+  8 =>
+  array(
     'name' => 'Chigeru Davies Chidera',
     'bloodGroup' => 'O+',
     'stateOfOrigin' => 'Rivers',
     'phoneNumber' => '07019624022',
-    'hobbies' => 
-    array (
+    'hobbies' =>
+    array(
       0 => 'Football',
       1 => 'Swimming',
       2 => 'Coding',
@@ -112,14 +112,14 @@ $members = array (
       4 => 'Data analysis',
     ),
   ),
-  9 => 
-  array (
+  9 =>
+  array(
     'name' => 'Benjamin Angelo',
     'bloodGroup' => 'O-',
     'stateOfOrigin' => 'Akwa Ibom',
     'phoneNumber' => '08136035685',
-    'hobbies' => 
-    array (
+    'hobbies' =>
+    array(
       0 => 'Haming',
       1 => 'Reading',
       2 => 'Writing',
@@ -128,57 +128,57 @@ $members = array (
 );
 
 // 1st Semester Courses
-$semesterCourses = array (
-  0 => 
-  array (
+$semesterCourses = array(
+  0 =>
+  array(
     'code' => 'SENG405',
     'title' => 'Software Project Management',
     'credits' => 3,
   ),
-  1 => 
-  array (
+  1 =>
+  array(
     'code' => 'SENG407',
     'title' => 'Software Measurement and Metrics',
     'credits' => 3,
   ),
-  2 => 
-  array (
+  2 =>
+  array(
     'code' => 'SENG401',
     'title' => 'Mobile Applications Design and Developments',
     'credits' => 3,
   ),
-  3 => 
-  array (
+  3 =>
+  array(
     'code' => 'SENG413',
     'title' => 'Current Trends in Software Engineering',
     'credits' => 2,
   ),
-  4 => 
-  array (
+  4 =>
+  array(
     'code' => 'COSC423',
     'title' => 'Artificial Intelligence and Applications',
     'credits' => 3,
   ),
-  5 => 
-  array (
+  5 =>
+  array(
     'code' => 'COSC409',
     'title' => 'Database Admin Workshop',
     'credits' => 1,
   ),
-  6 => 
-  array (
+  6 =>
+  array(
     'code' => 'SENG411',
     'title' => 'Open Source Systems Development',
     'credits' => 3,
   ),
-  7 => 
-  array (
+  7 =>
+  array(
     'code' => 'GEDS400',
     'title' => 'Introduction to Entrepreneurial Skills',
     'credits' => 2,
   ),
-  8 => 
-  array (
+  8 =>
+  array(
     'code' => 'SENG409',
     'title' => 'Network Security and Software Development',
     'credits' => 3,
@@ -186,12 +186,12 @@ $semesterCourses = array (
 );
 
 // GPA Records - Stores only student names and their scores (GPA calculated on the fly)
-$gpaRecords = array (
-  0 => 
-  array (
+$gpaRecords = array(
+  0 =>
+  array(
     'name' => 'Bamidele Ronnie-azriel Ifeoluwa',
-    'scores' => 
-    array (
+    'scores' =>
+    array(
       'SENG405' => 78.0,
       'SENG407' => 82.0,
       'SENG401' => 85.0,
@@ -203,11 +203,11 @@ $gpaRecords = array (
       'SENG409' => 80.0,
     ),
   ),
-  1 => 
-  array (
+  1 =>
+  array(
     'name' => 'Azuatalam Chiedu Frank',
-    'scores' => 
-    array (
+    'scores' =>
+    array(
       'SENG405' => 72,
       'SENG407' => 68,
       'SENG401' => 81,
@@ -219,11 +219,11 @@ $gpaRecords = array (
       'SENG409' => 82,
     ),
   ),
-  2 => 
-  array (
+  2 =>
+  array(
     'name' => 'Bolarinwa David Eniola',
-    'scores' => 
-    array (
+    'scores' =>
+    array(
       'SENG405' => 89.0,
       'SENG407' => 87.0,
       'SENG401' => 92.0,
@@ -235,11 +235,11 @@ $gpaRecords = array (
       'SENG409' => 91.0,
     ),
   ),
-  3 => 
-  array (
+  3 =>
+  array(
     'name' => 'Olatilewa Braimah',
-    'scores' => 
-    array (
+    'scores' =>
+    array(
       'SENG405' => 69,
       'SENG407' => 74,
       'SENG401' => 71,
@@ -252,11 +252,11 @@ $gpaRecords = array (
       'GEDS001' => 5,
     ),
   ),
-  4 => 
-  array (
+  4 =>
+  array(
     'name' => 'Basanya Basirat',
-    'scores' => 
-    array (
+    'scores' =>
+    array(
       'SENG405' => 84,
       'SENG407' => 80,
       'SENG401' => 86,
@@ -269,11 +269,11 @@ $gpaRecords = array (
       'GEDS001' => 18,
     ),
   ),
-  5 => 
-  array (
+  5 =>
+  array(
     'name' => 'Chidinma Ogor',
-    'scores' => 
-    array (
+    'scores' =>
+    array(
       'SENG405' => 91.0,
       'SENG407' => 89.0,
       'SENG401' => 93.0,
@@ -285,11 +285,11 @@ $gpaRecords = array (
       'SENG409' => 90.0,
     ),
   ),
-  6 => 
-  array (
+  6 =>
+  array(
     'name' => 'Babington-Ashaye Adejare',
-    'scores' => 
-    array (
+    'scores' =>
+    array(
       'SENG405' => 65,
       'SENG407' => 70,
       'SENG401' => 68,
@@ -302,11 +302,11 @@ $gpaRecords = array (
       'GEDS001' => 10,
     ),
   ),
-  7 => 
-  array (
+  7 =>
+  array(
     'name' => 'Emmanuel Chibuzor',
-    'scores' => 
-    array (
+    'scores' =>
+    array(
       'SENG405' => 86.0,
       'SENG407' => 80.0,
       'SENG401' => 81.0,
@@ -318,11 +318,11 @@ $gpaRecords = array (
       'SENG409' => 80.0,
     ),
   ),
-  8 => 
-  array (
+  8 =>
+  array(
     'name' => 'Chigeru Davies Chidera',
-    'scores' => 
-    array (
+    'scores' =>
+    array(
       'SENG405' => 77,
       'SENG407' => 80,
       'SENG401' => 83,
@@ -335,11 +335,11 @@ $gpaRecords = array (
       'GEDS001' => 9,
     ),
   ),
-  9 => 
-  array (
+  9 =>
+  array(
     'name' => 'Benjamin Angelo',
-    'scores' => 
-    array (
+    'scores' =>
+    array(
       'SENG405' => 75,
       'SENG407' => 78,
       'SENG401' => 82,
@@ -354,16 +354,116 @@ $gpaRecords = array (
   ),
 );
 
-$studentCourses = [
-  "22/0131" => $semesterCourses,
-  "22/0158" => $semesterCourses,
-  "22/0318" => $semesterCourses,
-  "22/0093" => $semesterCourses,
-  "22/0151" => $semesterCourses,
-  "22/0019" => $semesterCourses,
-  "22/0060" => $semesterCourses,
-  "22/0148" => $semesterCourses,
-  "22/0094" => $semesterCourses,
-];
 
-?>
+
+$studentCourses = [
+  "22/0202" => [
+    ["code" => "GEDS420", "title" => "Biblical Principles in Personal and Professional Life"],
+    ["code" => "SENG402", "title" => "Software Quality Engineering and Testing"],
+    ["code" => "SENG404", "title" => "Human Computer Interaction and Emerging Technologies"],
+    ["code" => "SENG406", "title" => "Formal Methods Specifications in Software Engineering"],
+    ["code" => "SENG412", "title" => "Internet Technologies and Web Applications Development"],
+    ["code" => "SENG490", "title" => "Research Project"],
+    ["code" => "COSC430", "title" => "Hands-On-JAVA training"],
+    ["code" => "SENG414", "title" => "Cloud Computing Technologies"],
+  ],
+
+  "22/0158" => [
+    ["code" => "GEDS420", "title" => "Biblical Principles in Personal and Professional Life"],
+    ["code" => "SENG402", "title" => "Software Quality Engineering and Testing"],
+    ["code" => "SENG404", "title" => "Human Computer Interaction and Emerging Technologies"],
+    ["code" => "SENG406", "title" => "Formal Methods Specifications in Software Engineering"],
+    ["code" => "SENG412", "title" => "Internet Technologies and Web Applications Development"],
+    ["code" => "SENG490", "title" => "Research Project"],
+    ["code" => "COSC430", "title" => "Hands-On-JAVA training"],
+    ["code" => "SENG414", "title" => "Cloud Computing Technologies"],
+  ],
+
+  "22/0317" => [ // Bamidele Ronnie-azriel Ifeoluwa
+    ["code" => "GEDS420", "title" => "Biblical Principles in Personal and Professional Life"],
+    ["code" => "SENG402", "title" => "Software Quality Engineering and Testing"],
+    ["code" => "SENG404", "title" => "Human Computer Interaction and Emerging Technologies"],
+    ["code" => "SENG406", "title" => "Formal Methods Specifications in Software Engineering"],
+    ["code" => "SENG412", "title" => "Internet Technologies and Web Applications Development"],
+    ["code" => "SENG490", "title" => "Research Project"],
+    ["code" => "COSC430", "title" => "Hands-On-JAVA training"],
+    ["code" => "SENG408", "title" => "Analysis, Design and Modelling of Real-Time Systems"],
+  ],
+
+  "22/0093" => [
+    ["code" => "GEDS420", "title" => "Biblical Principles in Personal and Professional Life"],
+    ["code" => "SENG402", "title" => "Software Quality Engineering and Testing"],
+    ["code" => "SENG404", "title" => "Human Computer Interaction and Emerging Technologies"],
+    ["code" => "SENG406", "title" => "Formal Methods Specifications in Software Engineering"],
+    ["code" => "SENG412", "title" => "Internet Technologies and Web Applications Development"],
+    ["code" => "SENG490", "title" => "Research Project"],
+    ["code" => "COSC430", "title" => "Hands-On-JAVA training"],
+    ["code" => "SENG408", "title" => "Analysis, Design and Modelling of Real-Time Systems"],
+  ],
+
+  "22/0151" => [
+    ["code" => "GEDS420", "title" => "Biblical Principles in Personal and Professional Life"],
+    ["code" => "SENG402", "title" => "Software Quality Engineering and Testing"],
+    ["code" => "SENG404", "title" => "Human Computer Interaction and Emerging Technologies"],
+    ["code" => "SENG406", "title" => "Formal Methods Specifications in Software Engineering"],
+    ["code" => "SENG412", "title" => "Internet Technologies and Web Applications Development"],
+    ["code" => "SENG490", "title" => "Research Project"],
+    ["code" => "COSC430", "title" => "Hands-On-JAVA training"],
+    ["code" => "SENG408", "title" => "Analysis, Design and Modelling of Real-Time Systems"],
+  ],
+
+  "22/0019" => [
+    ["code" => "GEDS420", "title" => "Biblical Principles in Personal and Professional Life"],
+    ["code" => "SENG402", "title" => "Software Quality Engineering and Testing"],
+    ["code" => "SENG404", "title" => "Human Computer Interaction and Emerging Technologies"],
+    ["code" => "SENG406", "title" => "Formal Methods Specifications in Software Engineering"],
+    ["code" => "SENG412", "title" => "Internet Technologies and Web Applications Development"],
+    ["code" => "SENG490", "title" => "Research Project"],
+    ["code" => "COSC430", "title" => "Hands-On-JAVA training"],
+    ["code" => "SENG408", "title" => "Analysis, Design and Modelling of Real-Time Systems"],
+  ],
+
+  "22/0131" => [
+    ["code" => "GEDS420", "title" => "Biblical Principles in Personal and Professional Life"],
+    ["code" => "SENG402", "title" => "Software Quality Engineering and Testing"],
+    ["code" => "SENG404", "title" => "Human Computer Interaction and Emerging Technologies"],
+    ["code" => "SENG406", "title" => "Formal Methods Specifications in Software Engineering"],
+    ["code" => "SENG412", "title" => "Internet Technologies and Web Applications Development"],
+    ["code" => "SENG490", "title" => "Research Project"],
+    ["code" => "COSC430", "title" => "Hands-On-JAVA training"],
+    ["code" => "SENG408", "title" => "Analysis, Design and Modelling of Real-Time Systems"],
+  ],
+
+  "22/0060" => [
+    ["code" => "GEDS420", "title" => "Biblical Principles in Personal and Professional Life"],
+    ["code" => "SENG402", "title" => "Software Quality Engineering and Testing"],
+    ["code" => "SENG404", "title" => "Human Computer Interaction and Emerging Technologies"],
+    ["code" => "SENG406", "title" => "Formal Methods Specifications in Software Engineering"],
+    ["code" => "SENG412", "title" => "Internet Technologies and Web Applications Development"],
+    ["code" => "SENG490", "title" => "Research Project"],
+    ["code" => "COSC430", "title" => "Hands-On-JAVA training"],
+    ["code" => "COSC408", "title" => "Modeling and simulations"],
+  ],
+
+  "22/0148" => [
+    ["code" => "GEDS420", "title" => "Biblical Principles in Personal and Professional Life"],
+    ["code" => "SENG402", "title" => "Software Quality Engineering and Testing"],
+    ["code" => "SENG404", "title" => "Human Computer Interaction and Emerging Technologies"],
+    ["code" => "SENG406", "title" => "Formal Methods Specifications in Software Engineering"],
+    ["code" => "SENG412", "title" => "Internet Technologies and Web Applications Development"],
+    ["code" => "SENG490", "title" => "Research Project"],
+    ["code" => "COSC430", "title" => "Hands-On-JAVA training"],
+    ["code" => "COSC408", "title" => "Modeling and simulations"],
+  ],
+
+  "22/0094" => [
+    ["code" => "GEDS420", "title" => "Biblical Principles in Personal and Professional Life"],
+    ["code" => "SENG402", "title" => "Software Quality Engineering and Testing"],
+    ["code" => "SENG404", "title" => "Human Computer Interaction and Emerging Technologies"],
+    ["code" => "SENG406", "title" => "Formal Methods Specifications in Software Engineering"],
+    ["code" => "SENG412", "title" => "Internet Technologies and Web Applications Development"],
+    ["code" => "SENG490", "title" => "Research Project"],
+    ["code" => "COSC430", "title" => "Hands-On-JAVA training"],
+    ["code" => "COSC408", "title" => "Modeling and simulations"],
+  ],
+];

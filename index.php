@@ -2,9 +2,9 @@
 require_once 'data.php';
 
 $students = [
-    ["name" => "Azuatalam Chiedu Frank", "matric" => "22/0131"],
+    ["name" => "Azuatalam Chiedu Frank", "matric" => "22/0202"],
     ["name" => "Babington-Ashaye Adejare ", "matric" => "22/0158"],
-    ["name" => "Bamidele Ronnie-azriel Ifeoluwa", "matric" => "22/0318"],
+    ["name" => "Bamidele Ronnie-azriel Ifeoluwa", "matric" => "22/0317"],
     ["name" => "Basanya Basirat Abiodun", "matric" => "22/0093"],
     ["name" => "Benjamin Angelo Mfoniso", "matric" => "22/0151"],
     ["name" => "Bolarinwa David Eniola", "matric" => "22/0019"],
@@ -68,7 +68,7 @@ $semester = "2025/2026";
                             </div>
                             <div class="name"><?php echo htmlspecialchars($student["name"]); ?></div>
                             <div class="matric">Matric No: <?php echo htmlspecialchars($student["matric"]); ?></div>
-                            <div class="flip" style="margin-top: auto; font-size: 0.8rem; color: #888;">Click to flip</div>
+                            <div class="flip" style="margin-top: auto; font-size: 0.8rem; color: #888;">Hover to flip</div>
                         </div>
 
                         <div class="flip-card-back">
